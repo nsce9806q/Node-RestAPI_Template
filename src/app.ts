@@ -1,6 +1,13 @@
-import express from 'express';
+import express from "express";
+import middleware from "./middleware";
 
-const app:express.Application = express();
+const startServer = async () => {
+    const app: express.Application = express();
+    await middleware(app);
 
-var str:string = "hi";
-console.log(str);
+    app.listen(3000, () => {
+        console.log("Express Server listening on port 3000");
+    })
+}
+
+startServer();
