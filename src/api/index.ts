@@ -1,5 +1,5 @@
-import { Router } from "express";
-import test from "./test";
+import { Router } from 'express';
+import test from './test';
 
 export default () => {
     const app = Router();
